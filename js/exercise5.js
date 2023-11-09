@@ -1,23 +1,13 @@
+// 5- Definir una función que muestre información sobre una cadena de texto que se le pasa como argumento. A partir de la cadena que se le pasa, la función determina si esa cadena está formada sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas.
 function analizarCadena(cadena) {
-    // Verificar si la cadena está formada solo por mayúsculas.
-    if (cadena === cadena.toUpperCase()) {
-      return "La cadena está formada solo por mayúsculas.";
-    }
-    // Verificar si la cadena está formada solo por minúsculas.
-    else if (cadena === cadena.toLowerCase()) {
-      return "La cadena está formada solo por minúsculas.";
-    }
-    // La cadena tiene una mezcla de mayúsculas y minúsculas.
-    else {
-      return "La cadena tiene una mezcla de mayúsculas y minúsculas.";
-    }
+  if (cadena === cadena.toUpperCase()) {
+    return "La cadena está formada solo por mayúsculas.";
+  } else if (cadena === cadena.toLowerCase()) {
+    return "La cadena está formada solo por minúsculas.";
+  } else {
+    return "La cadena tiene una mezcla de mayúsculas y minúsculas.";
   }
-  
-  // Solicitar al usuario que ingrese una cadena de texto.
-  let cadenaIngresada = prompt("Ingrese una cadena de texto:");
-  
-  // Llamar a la función y obtener el resultado.
-  let resultado = analizarCadena(cadenaIngresada);
-  
-  // Mostrar el resultado en la página web.
-  document.write("<p>" + resultado + "</p>");
+}
+let cadenaIngresada = prompt("Ingrese una cadena de texto:");
+let resultado = analizarCadena(cadenaIngresada);
+document.write("<p>" + resultado + "</p>");
